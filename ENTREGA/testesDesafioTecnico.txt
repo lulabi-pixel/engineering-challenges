@@ -1,0 +1,20 @@
+**TESTES DESAFIO TÉCNICO**
+
+IMAGENS NORMALIZADAS
+
+PS C:\Users\luiza\engineering-challenges> py tools/bbox_viewer.py --pdf data/328024377/bilans/pdf/bilan_2020-12-24_63e8ebbb54febda17c19ee7c.pdf --page 12 --ocr data/328024377/bilans/ocr/63e8ebbb54febda17c19ee7c --bbox 0.2411,0.2362,0.4508,0.2476 -o check.png
+
+check.png ficou perfeito, o teste foi feito com <<Composition du capital social>>
+
+
+PS C:\Users\luiza\engineering-challenges> py tools/bbox_viewer.py --pdf data/820561470/bilans/pdf/bilan_2023-06-05_6493e4372f502414800f8164.pdf --page 6 --ocr data/820561470/bilans/ocr/6493e4372f502414800f8164 --bbox 0.1951,0.8593,0.3332,0.8725 -o check_rotacionado.png
+
+check_rotacionado.png conseguiu encontrar o texto mas ficou um pouco deslocado, era uma limitação esperada, esse era um documento com rotação de 0.7
+o teste foi feito com <<total>> e como foi esperado ele retornou um retângulo em volta de <<TOTAL ACTIF (I À VI)>>, já que identificou a palavra chave
+nessa linha
+
+
+PROCURA DE VALOR AO LADO DO LABEL
+
+em def encontrar_valor_ao_lado(linhas, linha_label, tolerancia=0.01) demos preferencia par usar is ao invés de == , assim a gente não corre o risco de ter
+um erro em que 2 coisas iguais não são vistas como iguais, já que com o is 
