@@ -1,12 +1,6 @@
-
-**TAKEOVERS DATA/ML CHALLENGE: BILAN**
+# Takeovers — Bilan Challenge
 
 **Candidata:** Luiza Rafael Camargo
-
---
-
-
-# Takeovers — Bilan Challenge
 
 ## What this does
 
